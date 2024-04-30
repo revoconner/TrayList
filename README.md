@@ -15,4 +15,4 @@ A simple list app that resides in your system tray icon
 
 < /br>
 ## Run without python
-I have compiled it and zipped it into an exe as well, just download <b> SystemTrayToDo1.0.7z </b> extract and run the <b>ToDo.exe</b>
+I have compiled it and zipped it into an exe as well, just download <b> SystemTrayToDo1.0.zip </b> from the releases section, extract and run the <b>ToDo.exe</b>
