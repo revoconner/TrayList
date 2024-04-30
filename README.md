@@ -12,3 +12,7 @@ A simple list app that resides in your system tray icon
 <li>To exit, right click on the tray and select exit. </li>
 </ul>
 <img width="107" alt="image" src="https://github.com/revoconner/ToDo/assets/88772846/480c8db7-cc00-4f35-b4f4-f3e67fbd25cb">
+
+< /br>
+## Run without python
+I have compiled it and zipped it into an exe as well, just download <b> SystemTrayToDo1.0.7z </b> extract and run the <b>ToDo.exe</b>
