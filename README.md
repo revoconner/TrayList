@@ -23,7 +23,7 @@ I made it so I can look over my daily tasks for work. It's not pretty and is ver
 <ul>
   <li>Make sure you have python installed</li>
   <li>Download the files, extract it and CD into it with your terminal</li>
-  <li>Install requirements with <b>pip install -m requirements.txt</b></li>
+  <li>Install requirements with <b>pip install -r requirements.txt</b></li>
   <li> Run by using <b>python todo.py</b></li>
 </ul>
 
