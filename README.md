@@ -31,5 +31,5 @@ I made it so I can look over my daily tasks for work. It's not pretty and is ver
 I have compiled it and zipped it into an exe as well, just download <b> SystemTrayToDo1.0.zip </b> from the releases section, extract and run the <b>ToDo.exe</b>
 
 ## Changelog
-1. Made app
-2. Redesign with Ctkinter
+1. v1.0 Made app
+2. v1.2 Redesign with Ctkinter
