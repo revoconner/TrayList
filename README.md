@@ -5,7 +5,7 @@ A simple list app that resides in your system tray icon.
 I made it so I can look over my daily tasks for work. It's not pretty and is very basic. It's written with Python 3.11 and tkinter.
 
 
-<img width="377" alt="image" src="https://github.com/revoconner/TrayList/assets/88772846/1a89450e-8587-49ac-8981-628f5bfb4a2b">
+<img width="377" alt="image" src="https://github.com/user-attachments/assets/c12ce1ef-77c1-4ced-af71-6286ac723779">
 
 
 ## How to use
@@ -14,6 +14,8 @@ I made it so I can look over my daily tasks for work. It's not pretty and is ver
 - The app will now run in your tray, to open click on it.
 - Whenever you type something in the list, it is saved instantly. To create new entries, press the Return/Enter key.
 ![image](https://github.com/user-attachments/assets/39dc70b9-e28f-481f-9b75-6b8294f73c24)
+
+
 
 
 
