@@ -7,7 +7,6 @@ from ctypes import windll
 
 windll.shcore.SetProcessDpiAwareness(1) #Set DPI awareness
 
-
 DATA_FILE = "todo_list.json" #save data in this file
 
 # Set the color theme for customtkinter
@@ -58,19 +57,27 @@ class TaskEntry(ctk.CTkFrame):
             side=ctk.RIGHT, padx=5, pady=5  # Increased padding
         )
 
-        self.text_entry.bind("<Return>", self.save_entry)
-
-        # Bind the event to save on any key release
-        #self.text_entry.bind("<KeyRelease>", self.save_entry)        
+        # Bind events
+        self.text_entry.bind("<Return>", self.handle_return)
+        self.text_entry.bind("<KeyRelease>", self.handle_key_release)
         self.text_var.trace("w", self.update_delete_button)
 
-    def save_entry(self, event=None):
+    def handle_return(self, event=None):
+        """Handle Return key press - create new entry if there's text"""
         if self.text_var.get():
             self.master.add_empty_task()
+            self.master.save_tasks()  # Also save when creating new entry
+
+    def handle_key_release(self, event=None):
+        """Handle any key release - save the current state"""
+        # Don't trigger save on Return key as it's handled separately
+        if event.keysym != 'Return':
+            self.master.save_tasks()
 
     def delete_task(self):
         if self.delete_callback:
             self.delete_callback(self)
+            self.master.save_tasks()  # Save after deletion
 
     def update_delete_button(self, *args):
         if self.text_var.get():
@@ -84,7 +91,6 @@ class ToDoList(ctk.CTk):
         self.title("Tray List")
         self.geometry("500x600")
 
-
         # Create a label to display at the top left
         self.title_label = ctk.CTkLabel(
             self,
@@ -96,12 +102,10 @@ class ToDoList(ctk.CTk):
             anchor=ctk.W, padx=5, pady=5  # Align with the text entry
         )
         
-        
         self.tasks = []
         self.load_tasks()
         self.protocol("WM_DELETE_WINDOW", self.on_closing)
         
-
         # Set the frame's background color to blue
         self.configure(fg_color="#111111") 
         

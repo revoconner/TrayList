@@ -4,3 +4,4 @@ pystray
 pillow
 pyglet
 customtkinter
+pyinstaller
