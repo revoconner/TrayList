@@ -17,7 +17,8 @@ I made it so I can look over my daily tasks for work. It's not pretty and is ver
 
 
 
-
+## C++ Version
+A C++ version is in the works in a different branch called **C++**. It's a work in progress.
 
 ## How to build
 1. Install python 3 and above.
