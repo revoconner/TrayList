@@ -33,3 +33,7 @@ Thumbs.db
 
 # Application specific
 todo_list.json
+
+# Local development
+.claude/
+old/
