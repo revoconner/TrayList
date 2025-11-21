@@ -29,3 +29,4 @@ A C++ version is in the works in a different branch called **C++**. It's a work 
 1. v1.0 Made app
 2. v1.2 Redesign with Ctkinter
 3. v1.3 Opens with left single click, instead having to right click and selecting open. Saves everything without having to press enter.
+4. v1.4 Fixed Enter key to automatically focus on new entry line. Fixed issue where deleting all entries left no way to create new ones.
