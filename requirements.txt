@@ -1,5 +1,3 @@
-tkinter
-json
 pystray
 pillow
 pyglet
