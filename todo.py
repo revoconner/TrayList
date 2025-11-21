@@ -65,8 +65,11 @@ class TaskEntry(ctk.CTkFrame):
     def handle_return(self, event=None):
         """Handle Return key press - create new entry if there's text"""
         if self.text_var.get():
-            self.master.add_empty_task()
+            new_task = self.master.add_empty_task()
             self.master.save_tasks()  # Also save when creating new entry
+            # Focus on the newly created task
+            if new_task:
+                new_task.text_entry.focus_set()
 
     def handle_key_release(self, event=None):
         """Handle any key release - save the current state"""
@@ -115,11 +118,15 @@ class ToDoList(ctk.CTk):
             fill=ctk.X, padx=5, pady=5  # Increased padding between tasks
         )
         self.tasks.append(new_task)
+        return new_task
 
     def delete_task(self, task):
         if task in self.tasks:
             task.pack_forget()
             self.tasks.remove(task)
+            # If all tasks are deleted, add an empty one
+            if not self.tasks:
+                self.add_empty_task()
 
     def save_tasks(self):
         tasks_data = [task.text_var.get() for task in self.tasks if task.text_var.get()]
